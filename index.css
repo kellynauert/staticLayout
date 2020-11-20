@@ -152,6 +152,7 @@ a {
   flex-direction: row;
   justify-content: center;
   margin-top: 24px;
+  width: 70%;
 }
 #streamingsection h2 {
   font-size: 24px;
@@ -170,16 +171,24 @@ h1 {
   padding: 24px;
   text-align: left;
   margin: 12px;
-  width: 70%;
 }
 #streamingrow h5,
 p {
   margin-top: 0;
   margin-bottom: 5px;
 }
+/* .imageoverlay {
+  background: linear-gradient(
+      156.82deg,
+      rgba(0, 0, 0, 0.6) 4.58%,
+      rgba(0, 0, 0, 0) 69.61%
+    ),
+    linear-gradient(24.5deg, rgba(0, 0, 0, 0.2) 4.71%, rgba(0, 0, 0, 0) 71.49%);
+} */
 
 #streamsection1 {
   background-image: url("assets/sec1.jpg");
+  /* width: 100%; */
 }
 #streamsection2 {
   background-image: url("assets/sec2.jpg");
