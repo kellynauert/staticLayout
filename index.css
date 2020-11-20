@@ -1,9 +1,24 @@
-body {
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  color: white;
+@font-face {
+  font-family: "HKGrotesk";
+  src: url("assets/font/HKGrotesk-Regular.ttf");
+  font-weight: 400;
 }
 
+@font-face {
+  font-family: "HKGrotesk";
+  src: url("assets/font/HKGrotesk-Black.ttf");
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+  font-family: "HKGrotesk", Arial, Helvetica, sans-serif;
+  color: white;
+  font-kerning: auto;
+}
+p {
+  font-size: 16px;
+}
 #banner {
   background-image: url(assets/bannerweb.jpg);
   height: 60vh;
@@ -18,7 +33,9 @@ body {
 .logo img {
   max-height: 90px;
 }
-
+.logo {
+  margin-top: 18px;
+}
 h6 {
   color: #2dbd9d;
   font-size: 12px;
@@ -39,6 +56,7 @@ h4 {
   font-size: 10px;
   opacity: 0.6;
   margin-bottom: 0;
+  font-weight: 400;
 }
 button {
   border-radius: 4px;
@@ -88,6 +106,7 @@ h3 {
   font-size: 14px;
   opacity: 0.6;
   margin: 10px 0;
+  font-weight: 400;
 }
 
 a {
@@ -145,15 +164,18 @@ a {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 10vh 0;
 }
 
-#streamingrow {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 24px;
-  width: 70%;
+#streamingsection h1,
+h6,
+p {
+  margin: 0;
 }
+#streamingsection h2 {
+  font-weight: 400;
+}
+
 #streamingsection h2 {
   font-size: 24px;
 }
@@ -161,43 +183,132 @@ a {
 h1 {
   font-size: 72px;
 }
+#streamingrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 24px;
+}
 
 #streamsection1,
 #streamsection2,
 #streamsection3,
 #streamsection4 {
-  width: 295px;
-  height: 450px;
+  width: 250px;
+  height: 400px;
   padding: 24px;
   text-align: left;
   margin: 12px;
+  background-size: cover;
 }
 #streamingrow h5,
 p {
   margin-top: 0;
   margin-bottom: 5px;
 }
-/* .imageoverlay {
-  background: linear-gradient(
-      156.82deg,
-      rgba(0, 0, 0, 0.6) 4.58%,
-      rgba(0, 0, 0, 0) 69.61%
-    ),
-    linear-gradient(24.5deg, rgba(0, 0, 0, 0.2) 4.71%, rgba(0, 0, 0, 0) 71.49%);
-} */
 
 #streamsection1 {
-  background-image: url("assets/sec1.jpg");
-  /* width: 100%; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    url("assets/sec1.jpg");
 }
 #streamsection2 {
-  background-image: url("assets/sec2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    url("assets/sec2.jpg");
 }
 
 #streamsection3 {
-  background-image: url("assets/sec3.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    url("assets/sec3.jpg");
 }
 
 #streamsection4 {
-  background-image: url("assets/sec4.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),
+    url("assets/sec4.jpg");
+}
+#plantable {
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+#plantable H1 {
+  font-size: 28px;
+  margin: 0;
+  color: rgb(41, 41, 41);
+  font-weight: 600;
+}
+
+#plantable H2 {
+  font-size: 14px;
+  margin-top: 5px;
+  color: gray;
+}
+
+#plantable Button {
+  width: 12vw;
+  height: 50px;
+  margin: 12px;
+  background-color: black;
+  color: white;
+  margin-bottom: 24px;
+}
+table {
+  border-collapse: collapse;
+  margin: 0px;
+}
+
+tr {
+  border-top: 1px solid rgb(235, 235, 235);
+  border-bottom: 1px solid rgb(235, 235, 235);
+  margin-top: 6px;
+}
+tr:first-child {
+  border-top: none;
+}
+
+td {
+  padding: 24px 0;
+
+  text-align: center;
+}
+
+.leftaligned {
+  text-align: left;
+}
+th {
+  padding-top: 50px;
+}
+th p,
+#plantable p {
+  font-weight: 400;
+  font-size: 16px;
+}
+tr h3 {
+  color: #727272;
+  font-size: 24px;
+}
+
+#smalltext {
+  font-size: 10px;
+  padding-bottom: 100px;
+}
+.grey {
+  background-color: rgba(0, 0, 0, 0.027);
+}
+#pop {
+  background-color: rgb(103, 114, 138);
+  border-radius: 100px;
+  padding: 8px;
+  width: 50%;
+}
+#pop h6 {
+  color: white;
+}
+
+.popcontainer {
+  display: flex;
+  justify-content: center;
+  height: 32px;
+  margin-bottom: 6px;
 }
